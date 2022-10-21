@@ -1,6 +1,4 @@
-# Documentation
+# Lewisham - Preparing for adulthood 
 
-[Documentation and examples](https://govuk-prototype-kit.herokuapp.com/docs)
-
-Documentation is also available when running the app locally at http:localhost:3000/docs
+A prototype of an updated preparing for adulthood area of the Lewisham local authority website. Designed to be a single place where young people in Lewisham with special educational needs and disabilities, and their parents and carers, can find out about becoming adults. 
 
