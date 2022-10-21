@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block headIcons %}
+  <link rel="shortcut icon" href="{{ asset_path }}images/unbranded.ico?0.18.3" type="image/x-icon" />
+{% endblock %}
+
+{% block head %}
+  <!--[if lte IE 8]><link href="/public/stylesheets/unbranded-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if gt IE 8]><!--><link href="/public/stylesheets/unbranded.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+
+  {% for stylesheetUrl in extensionConfig.stylesheets %}
+    <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+  {% endfor %}
+{% endblock %}
+
+{% block header %}
+
+  <header class="lh-header">
+    <div class="lh-header-container">
+      <img src="/public/images/lewisham-logo.png" alt="Lewisham Council crown logo">
+      
+    </div>
+  </header>
+
+
+{% endblock %}
+
+{% set mainClasses = "lewisham-main" %}
+
+
+{% set bodyClasses = "lewisham-defaults" %}
+
+{% block footer %}
+
+  <footer class="lh-footer">
+    <div class="lh-footer-container">
+      <section>
+        <h2 class="lh-heading lh-heading-m">Find out more about us</h2>
+        <p></p>
+      </section>
+      <section>
+        <h2 class="lh-heading lh-heading-m">Share page</h2>
+        <p></p>
+      </section>
+    </div>
+  </footer>
+
+{% endblock %}

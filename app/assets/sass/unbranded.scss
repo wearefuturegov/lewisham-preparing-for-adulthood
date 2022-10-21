@@ -1,0 +1,274 @@
+// The unbranded stylesheet is used if you need to create pages in your
+// prototype without the GOV.UK branding.
+//
+// See localhost:3000/docs/templates/blank-unbranded
+
+// Import settings first so we can override them before importing all of GOV.UK Frontend
+// If you need to enable compatibility mode or the legacy palette, do that *before* this import.
+@import "node_modules/govuk-frontend/govuk/settings/all";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+// Override the default GOV.UK Frontend font stack
+$govuk-font-family: 'Open Sans';
+
+// Override the canvas background colour, which is normally grey to blend with the GOV.UK footer.
+$govuk-canvas-background-colour: #f4f5f7;
+
+@import "application";
+
+$lh-dark-blue: #2b4972;
+$lh-black-blue: #1e3451;
+$lh-teal-blue: #009eb3;
+$lh-hero-color: #325687;
+$lh-teal-blue-text: #007e8f;
+$lh-mid-grey: #f4f5f7;
+$lh-dark-grey: #d4dae2;
+$lh-white: #fff;
+$lh-black-text: #3a3a3a;
+
+  
+
+// custom styles - Lewisham default
+
+.gov-main-wrapper, .lewisham-main {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.govuk-width-container, .gov-main-wrapper {
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.lewisham-defaults {
+    background-color: $govuk-canvas-background-colour;
+    font-family: $govuk-font-family;
+    
+    line-height: 1.6;
+    font-weight: 500;
+
+    .lh-text--white {
+        color: $lh-white;
+
+    box-sizing: border-box;
+}
+
+// typography defaults
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.6;
+	margin: 0;
+    font-weight: 500;
+}
+
+p {
+    line-height: 1.6;
+	margin: 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: -0.333333px;
+
+    color: $lh-black-text;
+}
+
+.lh-body-l {
+    font-size: 1.2em;
+    line-height: 2;
+    margin: .5em 0;
+}
+
+.lh-heading-xl {
+    font-size: 3rem;
+}
+
+.lh-heading-l {
+    font-size: 2rem;
+    margin: 1em 0;
+}
+
+.lh-heading-m {
+    font-size: 1.4rem;
+}
+
+.lh-footer .lh-heading-m {
+    color: $lh-white;
+}
+
+.lh-list {
+    font-size: 1.1875rem;
+    font-weight: 400;
+    color: $lh-black-text;
+}
+
+.lh-list--bullet li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $lh-teal-blue; /* Change the color */
+    font-weight: 800; /* If you want it to be bold */
+    display: inline-block;
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: .25em; /* Also needed for space (tweak if needed) */
+}
+
+// heading overrides for content-page
+
+.content-page-container h1, h2, h3, h4, h5, h6 {
+    color: $lh-dark-blue
+}
+
+.content-page-container h1 {
+    padding: 1em 0 .25em;
+    border-bottom: 2px $lh-dark-grey dashed;
+    letter-spacing: -1px;
+    line-height: 6rem;
+}
+
+.lh-content-summary {
+    margin: 1em 0 .5em;
+
+    font-weight: 300;
+    font-size: 1.6rem;
+    letter-spacing: -.5px;
+}
+
+.content-page-container {
+    background-color: $lh-white;
+}
+
+.content-page-container h2 {
+    margin: 1em 0 .5em;
+}
+
+.lh-header-container, .lh-footer-container, .lh-main-content, .content-page-text-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 3em;
+}
+
+.lh-header {
+    background-color: $lh-dark-blue;
+    border-top: $lh-teal-blue solid 6px;
+    img {
+        max-height: 10px;
+        padding: 1em 1em 1em 0;
+    }
+}
+
+.lh-footer {
+    background-color: $lh-black-blue;
+    color: $lh-white;
+    padding: 5em 0;
+    
+    .lh-footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 2em;
+        
+        section {
+            flex-grow: 1;
+
+            p {
+                margin-top: 1em;
+                border-top: $lh-teal-blue solid 3px;
+                background-color: #354963;
+                height: 120px;
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+.lh-hero-section {
+    background-color: $lh-hero-color;
+}
+
+.lh-main-content-intro {
+    margin: 2em 0 1em;
+}
+
+.govuk-breadcrumbs {
+    margin-top: 0;
+    padding-top: 2em;
+
+    a, a:link, a:visited {
+        color: $lh-white;
+        font-weight: 600;
+    }
+}
+
+.govuk-breadcrumbs__list-item::after {
+    content: '/';
+    margin-left: .7em;
+    font-weight: 700;
+    color: $lh-white;
+}
+
+.govuk-breadcrumbs__list-item::before {
+    content: none;
+}
+
+.lh-content-page-breadcrumbs {
+
+    background-color: $lh-mid-grey;
+    padding: 0 0 3em; 
+    
+    a, a:link, a:visited {
+        color: $lh-dark-blue;
+    }
+    
+    .govuk-breadcrumbs__list-item::after {
+        color: $lh-dark-grey;
+    }
+}
+
+.lh-hero-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    color: $lh-white;
+    padding: 0 3em;
+
+    text-align: center;
+    .lh-hero-content {
+        padding: 8rem 0;
+    }
+    .lh-hero-text {
+        margin-top: 1em;
+        font-size: 1.8rem;
+
+        &:before {
+        content: &9135;
+        font-size: 2rem;
+        color: $lh-white;
+        }
+    }
+}
+
+.lh-card-container {
+    margin: 2em 0 5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 3em;
+}
+
+.lh-card {
+    padding: 34px 30px 45px;
+    border-radius: 5px;
+    background-color: $lh-white;
+    height: 200px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.13), 0 4px 6px rgba(0, 0, 0, 0.07);
+
+    .lh-heading a, .lh-heading a:link, .lh-heading a:visited {
+        color: $lh-teal-blue-text;
+        font-weight: 700;
+    }
+    p {
+        margin-top: 0.5em;
+        font-size: 1.1rem;
+    }
+    
+}
+}
